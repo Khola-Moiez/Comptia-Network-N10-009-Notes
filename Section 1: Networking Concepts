@@ -1,0 +1,309 @@
+This section covers foundational networking knowledge required for the CompTIA Network+ N10-009 exam.
+1.1 – The OSI Model:-
+
+## Purpose:
+The OSI (Open Systems Interconnection) model is a 7-layer conceptual framework used to describe how data moves across a network.
+The 7 Layers (Top → Bottom):
+
+| Layer | Name         | Key Responsibility                 |
+| ----- | ------------ | ---------------------------------- |
+| 7     | Application  | User-facing network services       |
+| 6     | Presentation | Encryption, formatting             |
+| 5     | Session      | Session establishment & management |
+| 4     | Transport    | End-to-end delivery (TCP/UDP)      |
+| 3     | Network      | Logical addressing (IP routing)    |
+| 2     | Data Link    | MAC addressing, framing            |
+| 1     | Physical     | Bits, cables, signaling            |
+
+## Encapsulation Process:
+Data is wrapped with headers as it moves down the stack:
+Application → Transport → Network → Data Link → Physical
+
+1.2 – Network Appliances and Applications:-
+
+## Networking Devices:
+### Switch:
+* Operates at Layer 2
+* Forwards frames based on MAC address table
+
+### Router:
+* Operates at Layer 3
+* Routes packets between networks using IP addresses
+
+### Firewall:
+* Filters traffic based on rules
+* Can operate at L3–L7 depending on type
+
+### Access Point (AP):
+* Connects wireless clients to wired LAN
+
+### Other Devices:
+* Load balancer
+* IDS/IPS
+* Proxy server
+
+## Networking Functions:-
+
+### VPN (Virtual Private Network):
+Encrypted tunnel across public networks.
+
+### CDN (Content Delivery Network):
+Distributed content caching for performance.
+
+### QoS (Quality of Service):
+Traffic prioritization mechanism.
+
+### IP (Internet Protocol):
+Provides logical addressing and routing.
+
+1.3 – The Cloud:-
+
+## Designing the Cloud:
+### Network Function Virtualization (NFV):
+Virtualizes routers, firewalls, load balancers.
+
+### VPC (Virtual Private Cloud):
+Logically isolated cloud network.
+
+### Security Groups / Network ACLs:
+Virtual firewalls controlling inbound/outbound traffic.
+
+## Cloud Service Models:-
+
+| Model | Responsibility              |
+| ----- | --------------------------- |
+| SaaS  | Provider manages everything |
+| PaaS  | Provider manages platform   |
+| IaaS  | You manage OS and apps      |
+
+1.4 – Ports and Protocols:-
+
+## Introduction to IP:
+* Logical addressing system
+* IPv4 = 32-bit
+* IPv6 = 128-bit
+* Connectionless protocol
+
+## Common Ports:
+
+| Protocol | Port | Transport |
+| -------- | ---- | --------- |
+| HTTP     | 80   | TCP       |
+| HTTPS    | 443  | TCP       |
+| FTP      | 21   | TCP       |
+| SSH      | 22   | TCP       |
+| Telnet   | 23   | TCP       |
+| DNS      | 53   | UDP/TCP   |
+| SMTP     | 25   | TCP       |
+| RDP      | 3389 | TCP       |
+
+## Other Useful Protocols:
+### ICMP:
+* Error reporting
+* Used by ping
+
+### GRE:
+* Tunneling protocol
+
+### IPsec:
+* Secure IP communication
+* Used in VPNs
+
+## Network Communication Types:
+
+| Type      | Description                  |
+| --------- | ---------------------------- |
+| Unicast   | One-to-one                   |
+| Multicast | One-to-many (selected group) |
+| Broadcast | One-to-all                   |
+| Anycast   | One-to-nearest               |
+
+1.5 – Transmission Media:-
+
+## Wireless Networking:
+### 802.11 (Wi-Fi):
+Wireless LAN standard.
+
+### Cellular:
+4G LTE, 5G
+
+### Satellite:
+Long-distance communication
+
+## Ethernet Standards:
+* Defined by IEEE 802.3
+* Speed standards (10Mbps → 400Gbps+)
+* Backward compatible
+
+## Optical Fiber:-
+### Single-mode:
+* Long distance
+* Laser-based
+
+### Multimode:
+* Short distance
+* LED-based
+
+## Copper Cabling:-
+### Twisted Pair:
+* UTP / STP
+* Cat5e, Cat6, Cat6a
+
+### Coaxial:
+* Cable internet
+
+### Plenum-rated:
+* Fire-resistant jacket
+
+## Network Transceivers:-
+
+| Type  | Speed    |
+| ----- | -------- |
+| SFP   | 1 Gbps   |
+| SFP+  | 10 Gbps  |
+| QSFP  | 40 Gbps  |
+| QSFP+ | 40+ Gbps |
+
+## Connectors:-
+### Fiber:
+* LC
+* SC
+* ST
+* MPO
+
+### Copper:
+* RJ45 (Ethernet)
+* RJ11 (Telephone)
+* BNC
+* F-connector
+
+1.6 – Network Topologies:-
+## Common Topologies:
+
+| Type           | Description              |
+| -------------- | ------------------------ |
+| Star           | Central switch           |
+| Mesh           | Multiple redundant paths |
+| Hybrid         | Combination              |
+| Spine-and-Leaf | Data center optimized    |
+
+## Network Architectures:-
+### Three-Tier:
+* Core
+* Distribution
+* Access
+
+### Collapsed Core:
+Core + Distribution combined.
+
+1.7 – IPv4 Addressing:-
+
+## Binary Math
+
+* 8 bits = 1 octet
+* 255 = 11111111
+* Must understand decimal ↔ binary conversion
+
+---
+
+## IPv4 Fundamentals
+
+* 32-bit address
+* Public vs Private ranges:
+
+Private Ranges:
+
+* 10.0.0.0/8
+* 172.16.0.0–172.31.255.255
+* 192.168.0.0/16
+
+---
+
+## Classful Addressing
+
+| Class | Range   |
+| ----- | ------- |
+| A     | 1–126   |
+| B     | 128–191 |
+| C     | 192–223 |
+
+---
+
+## Subnet Masks & CIDR
+
+* /24 = 255.255.255.0
+* /25 = 128 block size
+* VLSM allows flexible subnet sizes
+
+## Subnetting Shortcuts
+
+### Magic Number
+
+Block size = 256 − subnet mask value
+
+### Seven Second Subnetting
+
+Quick host and network identification using powers of 2.
+
+# 1.8 – Network Environments
+
+## Software Defined Networking (SDN)
+
+Centralized controller manages network devices.
+
+### SD-WAN
+
+Optimizes WAN traffic across multiple links.
+
+---
+
+## VXLAN
+
+Encapsulates Layer 2 inside Layer 3.
+Scales to millions of virtual networks.
+
+---
+
+## Zero Trust
+
+Principles:
+
+* Verify explicitly
+* Least privilege
+* Assume breach
+
+Includes:
+
+* Policy-based authentication
+* SASE (Secure Access Service Edge)
+
+---
+
+## Infrastructure as Code (IaC)
+
+Network defined through code:
+
+* Playbooks
+* Automation
+* Version control
+
+Benefits:
+
+* Repeatability
+* Scalability
+* Reduced human error
+
+---
+
+## IPv6 Addressing
+
+* 128-bit address
+* Hexadecimal format
+* No broadcast (uses multicast)
+
+Transition Methods:
+
+* Dual stack
+* Tunneling
+* NAT64
+
